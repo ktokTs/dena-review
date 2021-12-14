@@ -1,12 +1,15 @@
 from board import board
 from exception import FillException
-import os
 
 def main():
     player = 0
     Board = board()
 
     while True:
+        print(player)
+        if player > 41:
+            print("draw")
+            return
         Board.display_board()
         print("Player" + str(player % 2 + 1) + " set piece")
         print("Player1 = O")

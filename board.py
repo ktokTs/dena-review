@@ -6,7 +6,8 @@ class board:
         self.Board = [[" " for j in range(7)] for i in range(6)]
 
     def display_board(self):
-        print("0  ->  x  ->  6")
+        print()
+        print(" 0 1 2 3 4 5 6 ")
         print("+-+-+-+-+-+-+-+")
         for oneline in self.Board:
             print("|", end="")
@@ -16,6 +17,8 @@ class board:
         print()
 
     def set_piece(self, row, player):
+        if (row < 0 or 6 < row):
+            raise IndexError
         for col_re in range(7):
             col = 5 - col_re
             if col < 0:

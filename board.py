@@ -14,6 +14,8 @@ class board:
             for piece in oneline:
                 print(piece, end="|")
             print("\n+-+-+-+-+-+-+-+")
+        print("Player1 = O")
+        print("Player2 = X")
         print()
 
     def set_piece(self, row, player):
